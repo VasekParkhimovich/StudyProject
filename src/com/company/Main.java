@@ -12,34 +12,34 @@ public class Main {
         c1.ifTouch(c2);
     }
 }
-class Circle{
+class Circle{ // класс круга
     public double x;
     public double y;
     public double r;
-    public void printCircle(){
+    public void printCircle(){ // метод для вывода круга
         System.out.println("Окружность с центром"+x+";"+y+"и радиусом"+r);
     }
-    public void moveCircle(double a, double b){
+    public void moveCircle(double a, double b){ // метод для перемещения центра круга
         x=x+a;
         y=y+b;
     }
-    public void zoomCircle(double k){
+    public void zoomCircle(double k){ // было написано до меня я прочто перепечатал
         r=r*k;
     }
-    public Circle(double a, double b,double x){
+    public Circle(double a, double b,double x){ // конструктор
         this.x=a;
         this.y=b;
         r=x;
     }
-    public double lengthCircle(){
+    public double lengthCircle(){ // метод для вычисления длинны окружности
         double d = 2*Math.PI*r;
         return d;
     }
-    public void moveCenter(){
+    public void moveCenter(){ // метод для установки рандомной точки центра круга
         x=(Math.random()*10);
         y=(Math.random()*10);
     }
-    public double diffCenterDrop(Circle cr){
+    public double diffCenterDrop(Circle cr){ // метод для вычисления расстояния между двумя центрами окружностей
         double resX = this.x - cr.x;
         double resY = this.y - cr.y;
         double resD = (resX*resX)+(resY*resY);
@@ -47,7 +47,7 @@ class Circle{
         System.out.println(sqrt);
         return sqrt;
     }
-    public boolean ifTouch(Circle cr){
+    public boolean ifTouch(Circle cr){ // метод, который проверяет, касаются ли окружности друг друга
         double d = diffCenterDrop(cr);
         boolean b;
         if((this.r+cr.r)>=d&&(this.r+d)>=cr.r&&(cr.r+d)>=this.r){
