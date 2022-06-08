@@ -1,4 +1,6 @@
 package com.company;
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Scanner;
 import javax.swing.*;
 import java.awt.*;
@@ -16,6 +18,7 @@ class Circle{ // класс круга
     public double x;
     public double y;
     public double r;
+    int tr;
     public void printCircle(){ // метод для вывода круга
         System.out.println("Окружность с центром"+x+";"+y+"и радиусом"+r);
     }
@@ -60,5 +63,6 @@ class Circle{ // класс круга
 
 
     }
+
 
 }
