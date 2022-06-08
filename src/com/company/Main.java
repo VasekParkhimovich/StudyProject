@@ -10,9 +10,6 @@ public class Main {
         Circle c2 = new Circle(2.0,3.0,2.0);
         c1.diffCenterDrop(c2);
         c1.ifTouch(c2);
-
-
-
     }
 }
 class Circle{
@@ -57,7 +54,10 @@ class Circle{
             b= true;
         }else b= false;
         System.out.println(b);
+        System.out.println("Привет Дима");
         return b;
+
+
 
     }
 
